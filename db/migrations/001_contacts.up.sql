@@ -3,3 +3,4 @@ CREATE TABLE IF NOT EXISTS contacts (
     email varchar(255) UNIQUE NOT NULL,
     name varchar(255) NOT NULL
 );
+INSERT INTO contacts (email, name) VALUES ("test", "circleci");
