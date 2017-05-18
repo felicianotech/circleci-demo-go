@@ -55,7 +55,8 @@ jobs:
 
       - run:
           name: Validate service is working
-          command: curl --retry 10 --retry-delay 1 --retry-connrefused -X POST --header "Content-Type: application/json" -d '{"email":"test@example.com","name":"Test User"}' http://localhost:8080/contacts
+          command: |
+            curl --retry 10 --retry-delay 1 --retry-connrefused -X POST --header "Content-Type: application/json" -d '{"email":"test@example.com","name":"Test User"}' http://localhost:8080/contacts
 
       - store_artifacts:
           path: /tmp/test-results
